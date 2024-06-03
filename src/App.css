@@ -1,0 +1,45 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+.site--masthead {
+  background-color: #F8F0E3;
+}
+
+.masthead--nav > .nav--link {
+  display: flex;  
+  width: 75px;  
+  margin: 0 auto;
+}
+
+.faction--link {
+  margin: 0 auto
+}
+
+.home--preview--box {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5px
+}
+
+.faction--preview {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5px
+}
+
+.creator--preview {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5px
+}
+
+.comment--form {
+  background-color: antiquewhite;
+  width: 300px;
+  margin: 0 auto;
+}
