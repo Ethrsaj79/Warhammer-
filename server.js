@@ -30,7 +30,7 @@ const connectedDB =  async () => {
   
   // Routes
   app.use('/api/auth', require('./routes/authRouter.js'))
-  app.use('/api/main', expressjwt({secret: `${process.env.SQWEQWET}`, algorithms: ['HS256']}))
+  app.use('/api/main', expressjwt({secret: process.env.SQWEQWET, algorithms: ['HS256']}))
   app.use('/api/main/user-comments', require(`./routes/commentRouter.js`))
   app.use("/api/factions", require("./routes/factionRouter.js"))
   app.use("/api/creators", require("./routes/creatorRouter.js"))
