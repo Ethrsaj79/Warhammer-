@@ -24,12 +24,22 @@ const CommentAndDataContextProvider = (props) => {
     const getAllCreatorData = async () => axios.get("/api/creators").then(res => (
         setCreators(res.data)
     ))
-    const getAllCommentData = async () => userAxios.get("/api/main/user-comments/comment-list").then(res => {
+    // Token-Protected Comment Section Routes \\
+    // const getAllCommentData = async () => userAxios.get("/api/main/user-comments/comment-list").then(res => {
+        //         setComments(res.data),
+        //         console.log(res.data)
+        
+        // })
+        // const newComment = async (userComment) => userAxios.post(`api/main/user-comments/new`, userComment).then(res => console.log(res.data))
+        
+         
+    // Non-Token-Protected Comment Section Routes \\
+    const getAllCommentData = async () => axios.get("/api/user-comments/comment-list").then(res => {
             setComments(res.data),
             console.log(res.data)
 
     })
-    const newComment = async (userComment) => userAxios.post(`api/main/user-comments/new`, userComment).then(res => console.log(res.data))
+    const newComment = async (userComment) => axios.post(`api/user-comments/new`, userComment).then(res => console.log(res.data))
     
     useEffect(() => {
         getAllFactionData(),

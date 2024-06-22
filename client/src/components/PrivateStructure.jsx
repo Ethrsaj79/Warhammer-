@@ -57,7 +57,10 @@ const NewCommentForm = () => {
         const {name, value} = e.target
         setUserComment(prevData => ({
             ...prevData,
-            user: storedUser.username,
+            // Token user parameter
+            // user: storedUser.username,
+            // Non-token user parameter
+            user: '',
             [name]: value
         }))
         // console.log(value)
@@ -75,19 +78,20 @@ const NewCommentForm = () => {
             <div style={{padding: 10}}className="comment--headers">
                 {/* Comment Type Checkbox */}
                 <select 
-                    style={{margin: 5}}
+                    style={{margin: 5, fontFamily:'Brush Script MT', fontStyle: 'oblique'}}
                     onChange={handleChange}
                     name="commentType"
                     value={userComment.commentType.value}
                 >
-                    <option value="default">Select Comment Type</option>
-                    <option value="Faction">Faction</option>
-                    <option value="Creator">Creator</option>
-                    <option value="General">General</option>
+                    <option style={{fontFamily:'Brush Script MT', fontStyle: 'oblique'}}value="default">Select Comment Type</option>
+                    <option style={{fontFamily:'Brush Script MT', fontStyle: 'oblique'}}value="Faction">Faction</option>
+                    <option style={{fontFamily:'Brush Script MT', fontStyle: 'oblique'}}value="Creator">Creator</option>
+                    <option style={{fontFamily:'Brush Script MT', fontStyle: 'oblique'}}value="General">General</option>
                 </select>
                 <br />
                 {/* Title input */}
                 <input 
+                style={{fontFamily:'Brush Script MT', fontStyle: 'oblique'}}
                 type="text" 
                 placeholder="Comment Title" 
                 name="title"
@@ -97,6 +101,7 @@ const NewCommentForm = () => {
             </div>
             {/* Content textarea */}
             <textarea 
+            style={{fontFamily:'Brush Script MT', fontStyle: 'oblique'}}
             cols="30" 
             rows="10"
             placeholder=""
@@ -115,28 +120,28 @@ const CommentSection = () => {
 
     const factionCategory = comments.filter(entry => entry.commentType === "Faction")
     const factionLayout = factionCategory.map(category => (
-            <div key={category._id}>
-                <h3>{category.title}</h3>
-                <br />
-                <p>{category.content}</p>
+            <div className="comment--card" key={category._id}>
+                <h4>{category.title}</h4>
+                {/* <br /> */}
+                <h6>{category.content}</h6>
             </div>
         ))
 
     const creatorCategory = comments.filter(entry => entry.commentType === "Creator")
     const creatorLayout = creatorCategory.map(category => (
-            <div key={category._id}>
-                <h3>{category.title}</h3>
-                <br />
-                <p>{category.content}</p>
+            <div className="comment--card" key={category._id}>
+                <h4>{category.title}</h4>
+                {/* <br /> */}
+                <h6>{category.content}</h6>
             </div>
         ))
 
     const generalCategory = comments.filter(entry => entry.commentType === "General")
     const generalLayout = generalCategory.map(category => (
-            <div key={category._id}>
-                <h3>{category.title}</h3>
-                <br />
-                <p>{category.content}</p>
+            <div className="comment--card" key={category._id}>
+                <h4>{category.title}</h4>
+                {/* <br /> */}
+                <h6>{category.content}</h6>
             </div>
         ))
 
@@ -149,24 +154,24 @@ const CommentSection = () => {
             {NewCommentForm()}
 
             <div>
-                    <h1>
+                    <h1 style={{fontFamily: 'Brush Script MT', fontStyle: 'oblique'}}>
                         Comment Section List:
                     </h1>
                 <div>
-                    <h3>
+                    <h3 style={{fontFamily: 'Brush Script MT', fontStyle: 'oblique'}}>
                         Faction Comments:
                     </h3>
                     <br />
                     {factionLayout}
                 </div>
                 <div>
-                    <h3>
+                    <h3 style={{fontFamily: 'Brush Script MT', fontStyle: 'oblique'}}>
                         Creator Comments:
                     </h3>
                     {creatorLayout}
                 </div>
                 <div>
-                    <h3>
+                    <h3 style={{fontFamily: 'Brush Script MT', fontStyle: 'oblique'}}>
                         General Comments:
                     </h3>
                     {generalLayout}

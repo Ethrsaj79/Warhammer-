@@ -53,12 +53,15 @@ function App() {
         {/* Public Creator Details */}
         <Route path={'/creators/:creatorId'} element={<CreatorDetails/>}/>
         
-        {/* Public Creator Details */}
+        {/* Public Comment Section Details */}
+        <Route path={'/comment-section'} element={<CommentSection/>}/>
+        
+        {/* Public Creator Details
         <Route path={`/comment-section`} element={
             <ProtectedRoute token={token}>
               <CommentSection/>
             </ProtectedRoute>
-          }/>
+          }/> */}
 
       </Routes>
     </>

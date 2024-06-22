@@ -52,7 +52,7 @@ const Home = () => {
         </div>
     ))
     const categoryBanner = factions.map(faction => (
-        <span className="catagory--choice" key={faction._id} style={{padding: 5}}>
+        <span className="category--choice" key={faction._id} style={{padding: 5}}>
             <Link to={`/factions/${faction._id}`}>
                 {faction.name}
             </Link>
@@ -65,17 +65,13 @@ const Home = () => {
             <div className="page--home">
                 <nav>
                     {/* Each subject below gets a link to it's relevant page element */}
-                    <Link to={'/creators'} style={{padding: 15}}>
-                    Creators
-                    </Link>
-                    <Link to={'/about'} style={{padding: 15}}>
-                    About
-                    </Link>
-                    <Link to={'/factions'} style={{padding: 15}}>
-                    Factions
-                    </Link>
+                    <Link to={`/signup`} style={{padding: 15}}>Signup Page</Link>
+                    <Link to={'/creators'} style={{padding: 15}}>Creators</Link>
+                    <Link to={'/about'} style={{padding: 15}}>About</Link>
+                    <Link to={'/factions'} style={{padding: 15}}>Factions</Link>
+                    <Link to={`/comment-section`} style={{padding: 15}}>Comment Section</Link>
                 </nav>
-                    <button onClick={logout}>Logout</button>
+                    <button style={{marginTop: 15}}onClick={logout}>Logout</button>
 
                     <div className="creator--previews">
                         {/* Home preview for the SODAZ, Boylan and Pedersen */}
@@ -88,31 +84,23 @@ const Home = () => {
                     <div className="original--content--previews">
 
                         {/* Lore Realted Content */}
-                        <div className="original--content">
+                        {/* <div className="original--content">
                             <img src={``} />
                             <Link to={`/(Lore Component with a list of third party loremasters)`} style={{padding: 15}}>Lore</Link>
-                        </div>
+                        </div> */}
                     
                         {/* Mini-Painting Realted Content */}
-                        <div className="original--content">
+                        {/* <div className="original--content">
                             <img src={``} />
                             <Link to={`/(Painting Component with a list of recommended paint providers)`} style={{padding: 15}}>Painting</Link>
-                        </div>
+                        </div> */}
                     
                         {/* GW-produced animations */}
-                        <div className="original--content">
+                        {/* <div className="original--content">
                             <img src={``} />
                             <Link to={`/(OriginalAnimation component with a list of GW-produced animations with the 
                                 lead director/animator/writer names accredited to each animation)`} style={{padding: 15}}>Original Animations</Link>
-                        </div>
-
-                        <div className="comments">
-                                <Link to={`/comment-section`} style={{padding: 5}}>Comment Section</Link>
-                        </div>
-
-                        <div className="comments">
-                                <Link to={`/signup`} style={{padding: 5}}>Signup Page</Link>
-                        </div>
+                        </div> */}
                     
                     </div>
 

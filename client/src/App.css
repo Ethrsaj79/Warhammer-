@@ -3,17 +3,31 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: #ead8c1;
 }
 
 .site--masthead {
   background-color: #F8F0E3;
+  background-image: linear-gradient( to right,#E5B80B, #ead8c1);
+  border: 0.5px solid #E5B80B;
+  border-radius: 5px;
+  font-family: 'Brush Script MT';
+  font-style: oblique;
+}
+
+.page--home > nav {
+  background-color: #E5B80B;
+  margin: 0 auto;
+  padding: 5px;
+  width: 50%;
+  margin-top: 10px;
 }
 
 .masthead--nav > .nav--link {
   display: flex;  
   width: 75px;  
   margin: 0 auto;
+  
 }
 
 .faction--link {
@@ -23,7 +37,7 @@
 .home--preview--box {
   display: inline-block;
   margin: 0 auto;
-  padding: 5px
+  padding: 10px
 }
 
 .faction--preview {
@@ -42,4 +56,44 @@
   background-color: antiquewhite;
   width: 300px;
   margin: 0 auto;
+}
+
+.category--choice {
+  border: 0.5px solid #E5B80B;
+}
+.category--choice > Link {
+  width: auto 25px;
+}
+.content--categories {
+  padding: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+a {
+  color: #36454F;
+  font-family: 'Brush Script MT';
+  font-style: oblique;
+}
+
+link {
+  color: #36454F;
+  font-family: 'Brush Script MT';
+  font-style: oblique;
+}
+
+button {
+  font-family: 'Brush Script MT';
+  font-style: oblique;
+}
+
+.comment--card {
+  margin: 0 auto;
+  margin-top: 5px ;
+  margin-bottom: 5px ;
+  width: 25%;
+  padding: 5px;
+  border: 1px solid #36454F;
+  border-radius: 25px;
+  background-color: #E5B80B;
 }
